@@ -5,22 +5,19 @@
         <title>LoginApp Web</title>
     </head>
     <body>
-        <header>
-            <a href="registro">
-                <button>Registro</button>
-            </a>
-            <a href="ingreso">
-                <button>Ingreso</button>
-            </a>
-        </header>
-        <br>
-        <label>Nombre: </label><br><br/>
-        <input> <br><br/>
-        <label>Contraseña: </label><br><br/>
-        <input> <br><br/>
-        <label>Validar Contraseña: </label><br><br/>
-        <input><br><br/>
-        <button>Aceptar</button><br><br/>
-        <input>
+
+    <header th:insert="header.html"></header>
+
+    <form th:object="${registroForm}" method="post">
+        <label>Nombre: </label>
+        <input th:field="*{nombre}" id="nombre" type="text"> <br/>
+        <label>Contraseña: </label>
+        <input th:field="*{password}" id="password" type="text"> <br/>
+        <label>Repetir contraseña: </label>
+        <input th:field="*{repeatPassword}" id="repeatPassword" type="text"> <br/>
+        <button type="submit">Aceptar</button> <br/>
+    </form>
+
+    <input th:value="${result}">
     </body>
 </html>

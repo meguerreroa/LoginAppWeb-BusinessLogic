@@ -86,10 +86,6 @@ public class UserDAOTest {
         UserDAO dao = new UserDAO(this.userRepository);
 
         User user = new User();
-       /* user = new User();
-        user.setNombre("John");
-        user.setPassword("4567");
-        assertEquals(SUCCESSFUL_OPERATION, dao.insert(user));*/
 
         user.setNombre("Henry");
         user.setPassword("1234");
